@@ -19,7 +19,7 @@ import string
 
 def randomString(stringLength):
     """生成指定长度的随机字符串（仅含大写字母A-Z）"""
-    letters = string.ascii_uppercase
+    letters = string.ascii_uppercase# 获取所有大写字母
     return ''.join(random.choice(letters) for i in range(stringLength))
 
  #定义一个函数 get_batch，用于生成一批训练数据
