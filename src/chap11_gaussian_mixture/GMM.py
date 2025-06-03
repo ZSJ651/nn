@@ -27,6 +27,7 @@ def generate_data(n_samples=1000):
     X_list = []
     y_true = []
     for i in range(n_components):
+ # 从多元正态分布生成样本
         X_i = np.random.multivariate_normal(mu_true[i], sigma_true[i], samples_per_component[i])
         X_list.append(X_i)
         y_true.extend([i] * samples_per_component[i])
