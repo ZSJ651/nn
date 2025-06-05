@@ -23,7 +23,7 @@ class RBM:
 
         # 初始化权重和偏置
         # 使用 Xavier 初始化方法：标准差 = sqrt(2 / (输入维度 + 输出维度))
-        init_std = np.sqrt(2.0 / (self.n_observe + self.n_hidden))  # Xavier初始化标准差
+        init_std = np.sqrt(2.0 / (self.n_observe + self.n_hidden)) # Xavier初始化标准差
 
         self.W = np.random.normal(
             0, init_std, size=(self.n_observe, self.n_hidden)
