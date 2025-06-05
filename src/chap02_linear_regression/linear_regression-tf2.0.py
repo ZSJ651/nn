@@ -12,7 +12,7 @@ from tensorflow.keras import optimizers, layers, Model
 
 def identity_basis(x):
     """恒等基函数"""
-    return np.expand_dims(x, axis=1)
+    return np.expand_dims(x, axis = 1)
 
 def multinomial_basis(x, feature_num=10):
     """多项式基函数"""
