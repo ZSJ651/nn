@@ -47,8 +47,8 @@ test_data = np.random.normal(size=[10, 5])
 # In[9]:
 
 def sigmoid(x):
-    exp_neg_x = tf.exp(-x)
-    prob_x = 1.0 / (1.0 + exp_neg_x)
+    exp_neg_x = tf.exp(-x)# 计算 -x 的指数
+    prob_x = 1.0 / (1.0 + exp_neg_x) # 计算 sigmoid 函数值
     return prob_x
 
 # 测试 sigmoid 实现是否正确
