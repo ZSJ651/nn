@@ -70,7 +70,7 @@ if __name__ == '__main__':
     # 载入数据，实际实用时将x替换为具体名称
     train_file = 'data/train_linear.txt'
     test_file = 'data/test_linear.txt'
-    data_train = load_data(train_file)  # 数据格式[x1, x2, t]
+    data_train = load_data(train_file) # 数据格式[x1, x2, t]
     data_test = load_data(test_file)
 
     # 使用训练集训练SVM模型
