@@ -27,7 +27,7 @@ if not(os.path.exists('./mnist/')) or not os.listdir('./mnist/'):
 train_data = torchvision.datasets.MNIST(
     root='./mnist/',  # 数据集保存路径
     train=True,  # 加载训练集
-    transform=torchvision.transforms.ToTensor(),  # 将图像转换为 Tensor 并归一化到[0,1]
+    transform=torchvision.transforms.ToTensor(), # 将图像转换为 Tensor 并归一化到[0,1]
     download=DOWNLOAD_MNIST  # 如果需要则下载
 )
 
