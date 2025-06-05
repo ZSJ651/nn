@@ -79,7 +79,7 @@ class RL_QG_agent: #定义了一个名为 RL_QG_agent 的类
             return np.random.choice(np.where(enables)[0])   # 随机选择一个合法动作
         
         max_q = np.max(legal_q)  # 找到合法动作中 Q 值最大的值
-        candidates = np.where(legal_q == max_q)[0]  # 找到所有 Q 值等于最大 Q 值的动作索引
+        candidates = np.where(legal_q == max_q)[0] # 找到所有 Q 值等于最大 Q 值的动作索引
         
         # 随机选择最优动作 （解决多个最大值的情况）
         return np.random.choice(candidates)
