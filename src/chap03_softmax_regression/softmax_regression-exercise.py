@@ -53,7 +53,7 @@ np.random.shuffle(data_set) # 随机打乱数据集的顺序
 epsilon = 1e-12  # 防止 log(0)
 
 class SoftmaxRegression(tf.Module):
-    def __init__(self, input_dim=2, num_classes=3):
+    def __init__(self, input_dim = 2, num_classes = 3):
         """
         初始化 Softmax 回归模型参数
         :param input_dim: 输入特征维度
