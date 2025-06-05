@@ -75,7 +75,7 @@ class SVM():
             misclassified = margin < 1
 
             # 梯度计算
-            dw = self.lambda_ * self.w - np.mean((misclassified * y)[:, np.newaxis] * X, axis=0)
+            dw = self.lambda_ * self.w - np.mean((misclassified * y)[:, np.newaxis] * X, axis = 0)
             db = -np.mean(misclassified * y)
 
             # 参数更新
