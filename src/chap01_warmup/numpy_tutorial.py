@@ -180,7 +180,7 @@ x = np.arange(0, 100, 0.1) #生成从0到99.9的数组，步长为 0.1，共 100
 y = x * x #计算每个 x 对应的y=x^2 的值
 
 plt.figure(figsize=(10, 6))  # 创建一个宽 10 英寸、高 6 英寸的图像窗口
-plt.plot(x, y, label="y = x^2", color="blue")  # 制蓝色曲线，并设置图例标签为y = x^2
+plt.plot(x, y, label="y = x^2", color="blue") # 制蓝色曲线，并设置图例标签为y = x^2
 
 # 添加标题和标签
 plt.title("Plot of y = x^2")  # 图像标题
