@@ -101,5 +101,5 @@ if __name__ == '__main__':
     # 评估结果，计算准确率
     acc_train = eval_acc(t_train, t_train_pred)
     acc_test = eval_acc(t_test, t_test_pred)
-    print("train accuracy: {:.1f}%".format(acc_train * 100))
-    print("test accuracy: {:.1f}%".format(acc_test * 100))
+    print("train accuracy: {:.1f}%".format(acc_train * 100))# 打印测试集准确率（格式化为百分比，保留1位小数）
+    print("test accuracy: {:.1f}%".format(acc_test * 100))# 打印测试集准确率（格式化为百分比，保留1位小数）
