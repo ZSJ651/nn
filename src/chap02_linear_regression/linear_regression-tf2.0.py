@@ -163,7 +163,7 @@ y_test_preds = predict(model, xs_test)
 std = evaluate(ys_test, y_test_preds)
 print("训练集预测值与真实值的标准差：{:.1f}".format(std))
 
-plt.plot(o_x, o_y, "ro", markersize=3)
+plt.plot(o_x, o_y, "ro", markersize = 3)
 plt.plot(o_x_test, y_test_preds, "k")
 # 设置x、y轴标签
 plt.xlabel("x")
