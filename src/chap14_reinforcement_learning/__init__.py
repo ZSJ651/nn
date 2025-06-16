@@ -83,8 +83,9 @@ register(
 )
 
 # 2. 山车任务：利用动量爬坡（状态空间连续，动作空间离散）
+# 注册一个名为 'MountainCar-v0' 的环境
 register(
-    id='MountainCar-v0',
+    id='MountainCar-v0', # 环境的唯一标识符
     entry_point='gym.envs.classic_control:MountainCarEnv',
     max_episode_steps=200,
     reward_threshold=-110.0,  # 负数奖励表示需要减少到达目标的步数
