@@ -106,8 +106,9 @@ register(
 )
 
 # 4. 双连杆机械臂：通过关节控制使末端到达目标位置（无奖励阈值，仅考察控制）
+# 注册一个名为 'Acrobot-v1' 的环境
 register(
-    id='Acrobot-v1',
+    id='Acrobot-v1', # 环境的唯一标识符
     entry_point='gym.envs.classic_control:AcrobotEnv',
     max_episode_steps=500,
 )
