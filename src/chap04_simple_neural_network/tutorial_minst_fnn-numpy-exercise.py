@@ -196,7 +196,8 @@ class Log:
 # In[5]:
 
 # import tensorflow as tf
-
+# 生成随机输入数据和权重矩阵
+# x 是一个形状为 (5, 6) 的随机矩阵，表示输入数据
 # x = np.random.normal(size=[5, 6])
 # W = np.random.normal(size=[6, 4])
 # aa = Matmul()
