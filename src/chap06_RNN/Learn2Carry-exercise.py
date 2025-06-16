@@ -61,7 +61,7 @@ def convertDigits2Num(Digits):
     Num = int(numStr)                      # 将字符串转换为整数
     return Num
 
-def pad2len(lst, length, pad=0):
+def pad2len(lst, length, pad = 0):
     '''将一个列表用`pad`填充到`length`的长度，例如 pad2len([1, 3, 2, 3], 6, pad=0) ==> [1, 3, 2, 3, 0, 0]
     '''#用0填充数位列表至固定长度，适配批量训练。
     lst+=[pad]*(length - len(lst))# 处理填充情况（优化内存分配）
