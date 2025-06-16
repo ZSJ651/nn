@@ -151,6 +151,7 @@ def compute_loss(pred, label):
 
 @tf.function
 def train_one_step(model, optimizer, x, y):
+    # 使用 tf.function 装饰器将此函数转换为 TensorFlow 计算图，以提高执行效率
     # 使用GradientTape记录计算图，以便计算梯度
     with tf.GradientTape() as tape:
         # 使用模型对输入数据x进行预测
