@@ -112,8 +112,8 @@ def least_squares(phi, y, alpha=0.0, solver="pinv"):
     if solver == "pinv":
         # 使用 numpy 的伪逆函数，基于 SVD 分解
         # 对病态矩阵具有良好的数值稳定性
-        A = phi.T @ phi + alpha * np.eye(n_features)
-        w = np.linalg.pinv(A) @ phi.T @ y
+        A = phi.T @ phi + alpha * np.eye(n_features) # 构造正规方程矩阵 (X^T X + αI)
+        w = np.linalg.pinv(A) @ phi.T @ y # 计算权重向量 w = (X^T X + αI)^-1 X^T y
 
     elif solver == "cholesky":
         # 使用 Cholesky 分解求解正规方程
