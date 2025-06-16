@@ -42,7 +42,7 @@ def identity_basis(x):
 # 请分别在这里实现"多项式基函数"（Multinomial Basis Function）以及"高斯基函数"（Gaussian Basis Function）
 
 # 其中以及训练集的x的范围在0-25之间
-def multinomial_basis(x, feature_num=10):
+def multinomial_basis(x, feature_num = 10):
     """多项式基函数：将输入x映射为多项式特征
     feature_num: 多项式的最高次数
     返回 shape (N, feature_num)"""
