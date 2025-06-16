@@ -218,9 +218,8 @@ model = myRNNModel() # 创建模型实例
 
 # In[6]:
 
-
-train(3000, model, optimizer)
-evaluate(model)
+train(3000, model, optimizer) # 评估模型的性能
+evaluate(model) # 评估模型的性能
 
 
 # In[11]:
