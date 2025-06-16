@@ -259,7 +259,7 @@ if __name__ == '__main__':
         更新后的图形对象
         """
         # 具体实现 
-        xx = np.arange(10, step=0.1)# 生成x轴数据点，范围0-9.9，步长0.1
+        xx = np.arange(10, step = 0.1)# 生成x轴数据点，范围0-9.9，步长0.1
         a = animation_frames[i][0]  # 从帧数据中提取当前帧的参数，假设animation_frames是一个列表，每个元素包含[a, b, c, loss]四个值
         b = animation_frames[i][1]  # 从帧数据中提取当前帧的参数b（通常表示偏移量或截距）
         c = animation_frames[i][2]  # 从帧数据中提取当前帧的参数c
@@ -274,8 +274,8 @@ if __name__ == '__main__':
         return (line_d,) + (C1_dots,) + (C2_dots,)  # 返回需要更新的对象元组，用于blitting优化
     # 创建FuncAnimation对象
     anim = animation.FuncAnimation(
-        f, animate, init_func=init, # 要绘制的图形对象，动画更新函数，初始化函数，设置动画初始状态
-        frames=len(animation_frames), interval=50, blit=True, repeat=False # 帧间隔(毫秒)，是否使用blitting优化，# 是否循环播放
+        f, animate, init_func = init, # 要绘制的图形对象，动画更新函数，初始化函数，设置动画初始状态
+        frames=len(animation_frames), interval = 50, blit = True, repeat = False # 帧间隔(毫秒)，是否使用blitting优化，# 是否循环播放
     )
 
    from IPython.display import HTML
