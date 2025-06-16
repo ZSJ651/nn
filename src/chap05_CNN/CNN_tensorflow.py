@@ -34,6 +34,8 @@ def compute_accuracy(v_xs, v_ys):
     """
     global prediction
     # 获取模型预测结果
+     # 使用 sess.run 运行计算图，获取模型对输入数据 v_xs 的预测结果 y_pre
+    # feed_dict 用于提供输入数据和占位符的值，其中 keep_prob: 1 表示不使用 dropout
     y_pre = sess.run(prediction, feed_dict={xs: v_xs, keep_prob: 1})
     # 比较预测与真实标签
     correct_prediction = tf.equal(tf.argmax(y_pre, 1), tf.argmax(v_ys, 1))
