@@ -51,7 +51,7 @@ def gaussian_basis(x, feature_num=10):
     return ret
 
 
-def load_data(filename, basis_func=gaussian_basis):
+def load_data(filename, basis_func = gaussian_basis):
     """载入数据并进行基函数变换
     返回：(特征, 标签), (原始x, 原始y)
     在特征矩阵中，phi0是偏置项（全1列），phi1是基函数变换后的特征"""
@@ -64,9 +64,9 @@ def load_data(filename, basis_func=gaussian_basis):
         xs, ys = zip(*xys) # 解压为特征和标签
         xs, ys = np.asarray(xs), np.asarray(ys) # 转换为numpy数组
         o_x, o_y = xs, ys # 保存原始数据
-        phi0 = np.expand_dims(np.ones_like(xs), axis=1) # 添加偏置项（全1列）
+        phi0 = np.expand_dims(np.ones_like(xs), axis = 1) # 添加偏置项（全1列）
         phi1 = basis_func(xs) # 应用基函数变换
-        xs = np.concatenate([phi0, phi1], axis=1) 
+        xs = np.concatenate([phi0, phi1], axis = 1) 
         # 拼接偏置和变换后的特征
         return (np.float32(xs), np.float32(ys)), (o_x, o_y)# 返回处理好的训练数据和原始数据
 
